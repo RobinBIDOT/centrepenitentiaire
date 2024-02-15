@@ -3,6 +3,8 @@ import java.util.List;
 
 public class Cellule {
     private int idCellule;
+    private int idQuartier;
+
     private List<Integer> idsDetenus; // IDs des détenus dans la cellule
     private String typeCellule; // Par exemple, QMA, QCD, QMC, etc.
     private int capacite; // Nombre maximum de détenus que la cellule peut accueillir
@@ -10,6 +12,7 @@ public class Cellule {
 
     public Cellule(int idCellule, String typeCellule, int capacite) {
         this.idCellule = idCellule;
+        this.idQuartier = idQuartier;
         this.typeCellule = typeCellule;
         this.capacite = capacite;
         this.idsDetenus = new ArrayList<>();
@@ -44,6 +47,26 @@ public class Cellule {
 
     public void setIdCellule(int idCellule) {
         this.idCellule = idCellule;
+    }
+
+    public int getIdQuartier() {
+        return idQuartier;
+    }
+
+    public void setIdQuartier(int idQuartier) {
+        this.idQuartier = idQuartier;
+    }
+
+    public void setIdsDetenus(List<Integer> idsDetenus) {
+        this.idsDetenus = idsDetenus;
+    }
+
+    public boolean isEstPleine() {
+        return estPleine;
+    }
+
+    public void setEstPleine(boolean estPleine) {
+        this.estPleine = estPleine;
     }
 
     public String getTypeCellule() {

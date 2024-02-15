@@ -1,5 +1,6 @@
 import java.util.Date;
 
+
 public class Etablissement {
     private int idEtablissement;
     private Date dateOuverture;
@@ -67,4 +68,17 @@ public class Etablissement {
     public void setNbDetenuDetention(int nbDetenuDetention) {
         this.nbDetenuDetention = nbDetenuDetention;
     }
+
+    public void ajouterBatiment(Batiment batimentHomme) {
+    }
+
+    public void afficherInfos() {
+        System.out.println("ID de l'Etablissement: " + idEtablissement);
+        System.out.println("Nom de l'Etablissement: " + nomEtablissement);
+        System.out.println("Date d'Ouverture: " + (dateOuverture != null ? dateOuverture.toString() : "Non spécifiée"));
+        System.out.println("Date de Fermeture: " + (dateFermeture != null ? dateFermeture.toString() : "Non spécifiée"));
+        System.out.println("Nombre de détenus au greffe: " + nbDetenuGreffe);
+        System.out.println("Nombre de détenus en détention: " + nbDetenuDetention);
+    }
+
 }

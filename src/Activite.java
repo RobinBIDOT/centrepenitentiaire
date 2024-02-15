@@ -1,14 +1,13 @@
-import java.time.Duration;
 import java.util.Date;
 
 public class Activite {
     private int idActivite;
     private String libelleActivite;
     private Date heureDebut;
-    private Duration duree;
+    private int duree; // Durée en minutes
 
     // Constructeur
-    public Activite(int idActivite, String libelleActivite, Date heureDebut, Duration duree) {
+    public Activite(int idActivite, String libelleActivite, Date heureDebut, int duree) {
         this.idActivite = idActivite;
         this.libelleActivite = libelleActivite;
         this.heureDebut = heureDebut;
@@ -40,11 +39,14 @@ public class Activite {
         this.heureDebut = heureDebut;
     }
 
-    public Duration getDuree() {
+    public int getDuree() {
         return duree;
     }
 
-    public void setDuree(Duration duree) {
+    public void setDuree(int duree) {
         this.duree = duree;
     }
+
+    // Autres méthodes
+    // ...
 }
