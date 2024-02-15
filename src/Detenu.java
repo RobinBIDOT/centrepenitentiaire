@@ -11,6 +11,7 @@ public class Detenu {
     private int idFichePenale;
     private boolean semiLibre;
     private int idActivite;
+    private boolean estDangereux;
 
     // Constructeur
     public Detenu(int idDetenu, String nomDetenu, String prenomDetenu, Date dateNaissance, String adresseCivile,
@@ -25,6 +26,7 @@ public class Detenu {
         this.idFichePenale = idFichePenale;
         this.semiLibre = semiLibre;
         this.idActivite = idActivite;
+        this.estDangereux = estDangereux;
     }
 
     // Getters et setters
@@ -106,5 +108,13 @@ public class Detenu {
 
     public void setIdActivite(int idActivite) {
         this.idActivite = idActivite;
+    }
+
+    public boolean isEstDangereux() {
+        return estDangereux;
+    }
+
+    public void setEstDangereux(boolean estDangereux) {
+        this.estDangereux = estDangereux;
     }
 }
